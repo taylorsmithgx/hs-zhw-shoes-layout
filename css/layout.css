@@ -9,13 +9,10 @@
   -moz-box-sizing: border-box;
 }
 
-.clearfix:after {
-  content: ".";
-  display: block;
+.clearfix::after {
+  content: "";
   clear: both;
-  visibility: hidden;
-  height: 0;
-  line-height: 0;
+  display: table;
 }
 
 .clear {
@@ -24,4 +21,30 @@
 
 /* Positioning Classes */
 
+.column {
+  float: left;
+  width: 31%;
+  margin-right: 3.5%;
+}
 
+.column:last-child {
+  margin-right: 0;
+}
+
+.column_two {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+  min-height: 600px;
+  margin-bottom: 30px;
+}
+
+.column_two:nth-child(2n) {
+  margin-right: 0;
+}
+
+.border_right {
+    float: left;
+    width: 33.3%;
+    padding: 0 0px 0 20px;
+}
